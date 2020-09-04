@@ -16,6 +16,7 @@ export default class PlantList extends Component {
 
   componentDidMount() {
 		axios.get("http://localhost:3333/plants").then((response) => {
+      //logging to see the data being displayed || can check http://localhost:3333/plants also
       console.log(response.data);
 			this.setState({
 				plants: response.data.plantsData,
